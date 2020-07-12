@@ -7,7 +7,6 @@ import Trades from './Trades'
 import Spinner from './Spinner'
 import PieChart from './PieChart'
 import { percentageCalculation } from './helpers'
-import './Feedback.sass'
 import './Portfolio.sass'
 
 export default function () {

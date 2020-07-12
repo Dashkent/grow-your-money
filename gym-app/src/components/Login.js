@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Feedback from './Feedback'
-import './Feedback.sass'
 import './Login.sass'
+import './Container.sass'
 import { loginUser } from 'gym-client-logic'
 
 export default class extends Component {
@@ -36,7 +36,7 @@ export default class extends Component {
 
     render() {
         return <section className="login">
-            <img className = "login__logo" alt="logo" src="../Logo.png"></img>
+        <img className = "logo" alt="logo" src="../Logo.png"></img>
             <h1 className="login__title">Login</h1>
             <form className="login__form" onSubmit={this.handleSubmit}>
                 <input type="email" name="email" placeholder="e-mail" required />

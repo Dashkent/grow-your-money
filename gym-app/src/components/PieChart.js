@@ -10,7 +10,7 @@ function PieChart({type, allocationBy, data }) {
                 datasets: [{
                     label: `Allocation by ${type}`,
                     data,
-                    backgroundColor: ['#8390FA', '#FAC748', '#F88DAD', '#F9E9EC']
+                    backgroundColor: ['#70c1b3', '#ffe66d', '#ff1654', '#247ba0']
                 }
                 ]
             })}

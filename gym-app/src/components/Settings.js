@@ -7,7 +7,6 @@ export default function () {
     const [error, setError] = useState()
     const [success, setSuccess] = useState()
     const [userCard, setCard] = useState()
-    const [cardError, setCardError] = useState()
 
     useEffect(() => {
         try {
@@ -16,7 +15,7 @@ export default function () {
                     
                     if (typeof card !== 'undefined') setCard(card)
                 })
-                .catch(error => setCardError(error.message))
+                .catch(error => setError(error.message))
         } catch (error) {
             setError(error.message)
         }
@@ -59,7 +58,7 @@ export default function () {
         {typeof userCard !== 'undefined' && (<>
             <form className="settings__form" onSubmit={handleSubmit}>
                 <section className="settings__card">
-                    <input className="settings__input settings__card-num" type="text" name="number1" maxlength="4" placeholder="1234" defaultValue={`${userCard.number.slice(0, 4)}`}></input>
+                    <input className="settings__input settings__card-num" type="text" name="number1" maxLength="4" placeholder="1234" defaultValue={`${userCard.number.slice(0, 4)}`}></input>
                     <input className="settings__input settings__card-num" type="text" name="number2" maxLength="4" placeholder="1234" defaultValue={`${userCard.number.slice(4, 8)}`}></input>
                     <input className="settings__input settings__card-num" type="text" name="number3" maxLength="4" placeholder="1234" defaultValue={`${userCard.number.slice(8, 12)}`}></input>
                     <input className="settings__input settings__card-num" type="text" name="number4" maxLength="4" placeholder="1234" defaultValue={`${userCard.number.slice(12, 17)}`}></input>
@@ -75,7 +74,7 @@ export default function () {
         {typeof userCard === 'undefined' && (<>
             <form className="settings__form" onSubmit={handleSubmit}>
                 <section className="settings__card">
-                    <input className="settings__input settings__card-num" type="text" name="number1" maxlength="4" placeholder="1234"></input>
+                    <input className="settings__input settings__card-num" type="text" name="number1" maxLength="4" placeholder="1234"></input>
                     <input className="settings__input settings__card-num" type="text" name="number2" maxLength="4" placeholder="1234"></input>
                     <input className="settings__input settings__card-num" type="text" name="number3" maxLength="4" placeholder="1234"></input>
                     <input className="settings__input settings__card-num" type="text" name="number4" maxLength="4" placeholder="1234"></input>
@@ -87,7 +86,7 @@ export default function () {
             </form>
         </>)}
 
-        {error && !cardError && <Feedback message={error.message} level="error" />}
+        {error && <Feedback message={error} level="error" />}
         {success && <Feedback message={success} />}
     </section>
 }

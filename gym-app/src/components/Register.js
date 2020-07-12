@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Feedback from './Feedback'
-import './Feedback.sass'
 import './Register.sass'
+import './Container.sass'
 import { registerUser } from 'gym-client-logic'
 
 export default function ({ onRegister, onGoToLogin }) {
@@ -33,7 +33,7 @@ export default function ({ onRegister, onGoToLogin }) {
     }
 
     return <section className='register'>
-        <img className="register__logo" alt="logo" src="../Logo.png"></img>
+        <img className = "logo" alt="logo" src="../Logo.png"></img>
         <h1 className="register__title" >Register</h1>
         <form className="register__form" onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="name" required pattern="[A-Za-z]{1,20}" ></input>

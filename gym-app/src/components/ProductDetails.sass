@@ -1,5 +1,6 @@
 .details
     margin-bottom: 8%
+    margin-top: 70px
 
     &__data
         display: flex
@@ -8,17 +9,18 @@
         margin-top: 5%
 
     &__price
+        width: 35%
+        min-height: 115px
         display: flex
-        text-transform: uppercase
         flex-direction: column
+        justify-content: space-evenly
+        text-transform: uppercase
         text-align: center
-        padding: 5%
         margin-bottom: 5%
-        background-color:  rgb(84, 114, 125)
-        box-shadow: 2px 2px 2px black
+        background-color:  rgb(178, 219, 191)
+        box-shadow: 2px 2px 2px rgb(23, 77, 99)
         border-radius: 10px
-        color: white
-        width: 20%
+        color: rgb(23, 77, 99)
 
         > p
             font-size: 12px
@@ -27,40 +29,16 @@
             font-size: 18px
     
     &__item
+        width: 40%
+        min-height: 125px
+        display: flex
+        flex-direction: column
+        justify-content: space-around
         text-align: center
-        border: 1px solid rgb(48, 74, 101)
+        border: 1px solid rgb(23, 77, 99)
         border-radius: 10px
-        padding: 6%
         font-size: 15px
         margin-bottom: 5%
-
-    &__form
-        display: flex
-        justify-content: center
-    
-    &__button
-        background-color: rgb(165, 96, 114)
-        box-shadow: 2px 2px 2px black
-        border: none
-        padding: 1%
-        width: 60px
-        color: white
-        border-radius: 5px
-    
-    &__underlyings
-        margin-button: 50px
-    
-    &__historics
-        margin-top: 5%
-        margin-button: 5%
-
-    &__side
-        text-transform: uppercase
-        font-size: 90%
-
-
-select
-    margin-right: 2%
 
 
 @media only screen and (min-width: 768px)

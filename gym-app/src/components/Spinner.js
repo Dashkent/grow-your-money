@@ -6,7 +6,7 @@ export default function ({ loading }) {
     return <section className="loading">
         <PropagateLoader
             size={18}
-            color={"#A56072"}
+            color={"#70C1B3"}
             loading={loading}
         />
     </section>

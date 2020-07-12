@@ -110,6 +110,7 @@ function App({ history }) {
   return (
     <div className="App">
       <header className="App-header">
+
         <Route exact path="/" render={() => isUserLoggedIn() ? <Redirect to="/home" /> : <Landing onGoToRegister={handleGoToRegister} onGoToLogin={handleGoToLogin} />} />
 
         <Route path="/register" render={() =>

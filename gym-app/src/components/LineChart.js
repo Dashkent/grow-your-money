@@ -10,8 +10,8 @@ function LineChart({labels, label, titleText, data}) {
                     {
                         label: `${label}`,
                         lineTension: 0.1,
-                        backgroundColor: "rgba(84,159,147,0.1)",
-                        borderColor: "rgba(84,159,147,1)",
+                        backgroundColor: "rgba(112, 193, 179,0.1)",
+                        borderColor: "rgba(112, 193, 179,1)",
                         data,
                     },
                 ],
