@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './ProductDetails.sass'
+import './TradeSelection.sass'
 import Feedback from './Feedback'
 import { addProduct } from 'gym-client-logic'
 
@@ -28,9 +28,9 @@ function TradeSelection(product) {
         }
     }
 
-    return <section>
-        <form className="details__form" onSubmit={onTrade}>
-            <select name="quantity">
+    return <section className="selection">
+        <form className="selection__form" onSubmit={onTrade}>
+            <select className="selection__quantity" name="quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -42,11 +42,11 @@ function TradeSelection(product) {
                 <option value="9">9</option>
                 <option value="10">10</option>
             </select>
-            <select name='side'>
+            <select className="selection__side" name='side'>
                 <option value='Buy'>Buy</option>
                 <option value='Sell'>Sell</option>
             </select>
-            <button className="details__button">Trade</button>
+            <button className="selection__button">Trade</button>
         </form>
         {error && <Feedback message={error} level="error" />}
         {success && <Feedback message={success} level="" />}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Line } from 'react-chartjs-2'
 import { retrieveProduct, retrieveUnderlyingPrice, retrieveFuturePrices } from 'gym-client-logic'
 import './ProductDetails.sass'
 import Spinner from './Spinner'
